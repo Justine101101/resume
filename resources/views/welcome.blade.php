@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0d0d0d; /* Dark background */
+      background: #0d0d0d;
       color: #f1f1f1;
       margin: 0;
       padding: 0;
@@ -43,67 +43,86 @@
       text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
     }
 
-    /* Section Cards */
+    /* Sections General */
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 60px auto;
-      background: #1a1a1a;
-      padding: 40px;
+      padding: 50px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.2);
+      background: #1a1a1a;
+      box-shadow: 0 4px 20px rgba(255, 215, 0, 0.15);
       transition: transform 0.3s, box-shadow 0.3s;
     }
     section:hover {
       transform: translateY(-5px);
-      box-shadow: 0 6px 25px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.35);
     }
 
     h1 {
       color: #FFD700;
       font-size: 2rem;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-align: center;
       text-shadow: 0 0 10px #FFD700;
     }
 
     h2 {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: #fff;
+      margin-bottom: 10px;
       border-left: 5px solid #FFD700;
-      padding-left: 10px;
-      margin-top: 20px;
-      margin-bottom: 15px;
+      padding-left: 12px;
     }
 
+    p {
+      color: #dcdcdc;
+      line-height: 1.7;
+    }
+
+    /* Home Section */
+    #home {
+      text-align: center;
+    }
+    #home h1 {
+      font-size: 2.5rem;
+    }
+    #home p {
+      font-size: 1.1rem;
+    }
+
+    /* Resume Page */
+    #resume {
+      background: #111;
+      border: 2px solid #FFD700;
+    }
+
+    /* Experience + Skills */
     ul {
       list-style: none;
       padding-left: 0;
     }
     ul li {
-      margin-bottom: 8px;
-      padding: 6px 10px;
+      margin-bottom: 12px;
+      padding: 12px;
       background: #262626;
       border-left: 4px solid #FFD700;
-      border-radius: 5px;
-      transition: background 0.3s;
+      border-radius: 6px;
+      transition: 0.3s;
     }
     ul li:hover {
       background: #333;
     }
 
-    p {
-      line-height: 1.6;
-      color: #dcdcdc;
+    /* Skills Grid */
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
     }
-
-    /* Hover link effect */
-    a {
+    .skills-list li {
+      text-align: center;
+      font-weight: bold;
       color: #FFD700;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-    a:hover {
-      color: #fff;
-      text-shadow: 0 0 10px #FFD700;
     }
 
     /* Contact Form */
@@ -151,6 +170,8 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#resume">Resume</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#about">About Me</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -158,51 +179,36 @@
 
   <!-- Home Section -->
   <section id="home">
-    <h1>Welcome to My Portfolio</h1>
+    <h1>Welcome to My Website</h1>
     <p>Hello! I'm <strong>Jundarino, Justine Franciscus</strong>, a BSIT 4 student passionate about technology, software development, and design.</p>
     <p>This website is a quick overview of my journey in IT, showcasing my <a href="#resume">resume</a>, skills, and <a href="#about">personal background</a>.</p>
   </section>
 
   <!-- Resume Section -->
   <section id="resume">
-    <h1>Resume</h1>
+    <h1>My Resume</h1>
     <header>
       <h2>JUNDARINO, JUSTINE FRANCISCUS</h2>
       <p>Email: jfrojundarino@gmail.com | Phone: +123 456 7890 | Location: Baguio City</p>
     </header>
+  </section>
 
-    <div class="section">
-      <h2>About Me</h2>
-      <p>Motivated and detail-oriented Bachelor of Science in Information Technology (BSIT) student with practical experience leveraging AI Copilot tools to enhance coding efficiency and problem-solving capabilities. Proficient in software development fundamentals, programming languages, and IT concepts, with a strong eagerness to apply innovative technologies in real-world projects.</p>
-    </div>
+  <!-- Experience Section -->
+  <section id="experience">
+    <h1>Experience</h1>
+    <ul>
+      <li><strong>OJT</strong> - GLOBAL (August - December)</li>
+    </ul>
+  </section>
 
-    <div class="section">
-      <h2>Work Experience</h2>
-      <ul>
-        <li><strong>OJT</strong> - GLOBAL (August - December)</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>School:</strong> Data Center College of the Philippines, Baguio City</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Skills</h2>
-      <ul>
-        <li>Web Developer</li>
-        <li>Programming</li>
-        <li>Graphic Design</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Hobbies</h2>
-      <p>Gaming, Sleep, Running</p>
-    </div>
+  <!-- Skills Section -->
+  <section id="skills">
+    <h1>Skills</h1>
+    <ul class="skills-list">
+      <li>Web Developer</li>
+      <li>Programming</li>
+      <li>Graphic Design</li>
+    </ul>
   </section>
 
   <!-- About Me Section -->
